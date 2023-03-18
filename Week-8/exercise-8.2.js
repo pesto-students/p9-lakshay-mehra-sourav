@@ -113,15 +113,19 @@ class SinglyLinkedList {
         temp = temp.next;
       }
 
+      //   Assigning next node of the tail node
       this.tail.next = this.head;
+
+      //   Making the kth node the new tail node
       this.tail = temp;
+
+      //   Making the (k + 1)th node the new head node
       this.head = temp.next;
+
+      //   Making the next node of the kth node null
       temp.next = null;
     }
   }
-  //   1 2 3 4 5
-  //   1 *
-  // 1 2
 }
 
 const list1 = new SinglyLinkedList();
