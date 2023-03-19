@@ -145,6 +145,8 @@ function checkBracketPairs(string) {
 
 const string1 = "[()]{}{()()}";
 const string2 = "[(])";
+const string3 = "()";
+const string4 = "([]";
 
 console.log("Checking string1");
 console.log(
@@ -156,4 +158,16 @@ console.log("\nChecking string2");
 console.log(
   "\tstring2 is has valid bracket pairs:",
   checkBracketPairs(string2)
+);
+
+console.log("\nChecking string3");
+console.log(
+  "\tstring3 is has valid bracket pairs:",
+  checkBracketPairs(string3)
+);
+
+console.log("\nChecking string4");
+console.log(
+  "\tstring4 is has valid bracket pairs:",
+  checkBracketPairs(string4)
 );
