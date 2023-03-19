@@ -53,35 +53,6 @@ class Stack {
   length() {
     return this.stack.length;
   }
-
-  // /**
-  //  * Prints all the items in the stack
-  //  * !Time Complexity: O(n)
-  //  * !Space Complexity: O(1)
-  //  */
-  // print() {
-  //   let length = this.stack.length;
-  //   for (let i = length - 1; i >= 0; i--) {
-  //     console.log(`${this.stack[i]} `);
-  //   }
-  // }
-
-  // /**
-  //  * Searches for a specific item in the stack
-  //  * !Time Complexity: O(n)
-  //  * !Space Complexity: O(1)
-  //  * @param {number} item The items that needs to be searched in the stack
-  //  * @return {number} The index where the item is found in the stack
-  //  */
-  // search(item) {
-  //   // let length = this.stack.length;
-  //   for (let i = 0; i < this.length(); i++) {
-  //     if (this.stack[i] == item) {
-  //       return i;
-  //     }
-  //   }
-  //   return -1;
-  // }
 }
 
 /**
@@ -119,6 +90,8 @@ function sameTypeCheck(bracket1, bracket2) {
 
 /**
  * Checks for validity of bracket pairs in provided string
+ * !Time Complexity: O(n)
+ * !Space Complexity: O(n)
  * @param {string} string String of bracket pairs
  * @returns {boolean} Whether the bracket pairs are valid or not
  */
