@@ -1,12 +1,8 @@
 /**
- * @param {number} n
- * @param {number[][]} trust
- * @return {number}
- */
-
-/**
  * Used for finding the vertex representing the judge given a trustor - trustee
  * relationship list and the total number of the people in the town
+ * !Time Complexity: O(n) {Iterating through the nodes at the end}
+ * !Space Complexity: O(n) {Indegree and outdegree arrays}
  * @param {number} n Number of people in the town
  * @param {number[][]} trust Array containing all the trustor - trustee relationships
  * @return {number} The vertex number representing the judge or -1
