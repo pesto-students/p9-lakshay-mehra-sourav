@@ -1,0 +1,15 @@
+.task {
+  /* border: 1px solid red; */
+  padding: 10px;
+  color: gray;
+  /* text-decoration: line-through; */
+}
+
+.task:hover {
+  color: black;
+  background-color: rgb(252, 252, 252);
+}
+
+.task-complete {
+  text-decoration: line-through;
+}
