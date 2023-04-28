@@ -134,7 +134,7 @@ function Todo() {
       setTasks([
         ...tasks,
         {
-          id: tasks.length ? tasks.length : 0,
+          id: tasks.length ? tasks.at(-1).id + 1 : 0,
           title: task.current.value,
         },
       ]);
@@ -142,8 +142,12 @@ function Todo() {
     }
   };
 
+  const deleteTask = (taskId) => {
+    let localTasks = tasks.filter((t) => t.id != taskId);
+    setTasks(localTasks);
+  };
+
   const toggleTaskComplete = (taskId) => {
-    console.log("in toggle", taskId);
     let localTasks = [...tasks];
     localTasks[taskId] = {
       ...localTasks[taskId],
@@ -152,24 +156,23 @@ function Todo() {
     setTasks(localTasks);
   };
 
-  console.log("tasks", tasks);
-
-  useEffect(() => {
-    console.log("useeffect of todo");
-  });
-
   return (
     <div className={TodoStyle["todo-container"]}>
       <Input ref={task} addTask={addTask} />
 
       <div className={TodoStyle["task-list"]}>
-        {tasks.map((task) => (
-          <Task
-            key={task.id}
-            task={task}
-            toggleTaskComplete={toggleTaskComplete}
-          />
-        ))}
+        {!tasks.length ? (
+          <div>You don't have any tasks!</div>
+        ) : (
+          tasks.map((task) => (
+            <Task
+              key={task.id}
+              task={task}
+              toggleTaskComplete={toggleTaskComplete}
+              deleteTask={deleteTask}
+            />
+          ))
+        )}
       </div>
     </div>
   );
