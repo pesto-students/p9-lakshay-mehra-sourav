@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# [](#project-title)Project Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React todo App
 
-## Available Scripts
+## [](#demo-link)Demo link:
 
-In the project directory, you can run:
+---
 
-### `npm start`
+Access my site 👉 [here](https://google.com)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## [](#table-of-content)Table of Content:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+- [About The App](#about-the-app)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Approach](#approach)
+- [Status](#status)
+- [Credits](#credits)
+- [License](#license)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## [](#about-the-app)About The App
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React todo App is an app that provides a virtual notepad specifically
+for writing down tasks that one needs to complete
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## [](#screenshots)Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+![The todo app](public\todo-app.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## [](#technologies)Technologies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+I mainly used `React` here, along with `HTML`, `CSS` and `JavaScript`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## [](#setup)Setup
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Download or clone the repository
+- Run `npm run start` or `npm start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## [](#approach)Approach
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+I defined a basic structure for the app and then started with the UI first, followed by the functionality. I used Tailwind classes through its CDN for the UI.
 
-### Analyzing the Bundle Size
+## [](#status)Status
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+The project is complete
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## [](#credits)Credits
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+List of contriubutors:
 
-### Deployment
+- [Sourav Mehra](https://github.com/mehra-sourav)
+- [Flowbite](https://flowbite.com/docs/components/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## [](#license)License
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT license @ [Sourav Mehra](https://github.com/mehra-sourav)
