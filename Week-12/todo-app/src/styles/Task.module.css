@@ -1,8 +1,6 @@
 .task {
-  /* border: 1px solid red; */
   padding: 10px;
   color: gray;
-  /* text-decoration: line-through; */
 }
 
 /* Text color changes only for tasks which are not marked complete */

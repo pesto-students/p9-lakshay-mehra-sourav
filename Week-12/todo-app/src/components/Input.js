@@ -1,7 +1,8 @@
 import React, { forwardRef } from "react";
 
 function Input(props, ref) {
-  // Handler for checking when Enter is pressed in Input box
+  // Handler for calling addTask() when Enter is pressed while focus is in
+  // Input box
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       // Add new task

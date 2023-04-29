@@ -16,17 +16,17 @@
   text-align: center;
 }
 
-/* width */
+/* Scrollbar width */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
+/* Scrollbar track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
 
-/* Handle */
+/* Scrollbar handle */
 ::-webkit-scrollbar-thumb {
   background: #bdbbbb;
 }

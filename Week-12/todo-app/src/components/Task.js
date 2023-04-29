@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import TaskStyle from "../styles/Task.module.css";
 
 function Task({ task, toggleTaskComplete, deleteTask }) {

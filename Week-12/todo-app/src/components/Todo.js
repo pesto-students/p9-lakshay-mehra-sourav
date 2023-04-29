@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import TodoStyle from "../styles/Todo.module.css";
 import Input from "./Input.js";
 import Task from "./Task.js";
@@ -21,113 +21,9 @@ function Todo() {
       title: "Go through other videos",
       complete: false,
     },
-    // {
-    //   id: 0,
-    //   title: "Buy milk",
-    //   complete: false,
-    // },
-    // {
-    //   id: 1,
-    //   title: "Complete todo app",
-    //   complete: false,
-    // },
-    // {
-    //   id: 2,
-    //   title: "Go through other videos",
-    //   complete: false,
-    // },
-    // {
-    //   id: 0,
-    //   title: "Buy milk",
-    //   complete: false,
-    // },
-    // {
-    //   id: 1,
-    //   title: "Complete todo app",
-    //   complete: false,
-    // },
-    // {
-    //   id: 2,
-    //   title: "Go through other videos",
-    //   complete: false,
-    // },
-    // {
-    //   id: 0,
-    //   title: "Buy milk",
-    //   complete: false,
-    // },
-    // {
-    //   id: 1,
-    //   title: "Complete todo app",
-    //   complete: false,
-    // },
-    // {
-    //   id: 2,
-    //   title: "Go through other videos",
-    //   complete: false,
-    // },
-    // {
-    //   id: 0,
-    //   title: "Buy milk",
-    //   complete: false,
-    // },
-    // {
-    //   id: 1,
-    //   title: "Complete todo app",
-    //   complete: false,
-    // },
-    // {
-    //   id: 2,
-    //   title: "Go through other videos",
-    //   complete: false,
-    // },
-    // {
-    //   id: 0,
-    //   title: "Buy milk",
-    //   complete: false,
-    // },
-    // {
-    //   id: 1,
-    //   title: "Complete todo app",
-    //   complete: false,
-    // },
-    // {
-    //   id: 2,
-    //   title: "Go through other videos",
-    //   complete: false,
-    // },
-    // {
-    //   id: 0,
-    //   title: "Buy milk",
-    //   complete: false,
-    // },
-    // {
-    //   id: 1,
-    //   title: "Complete todo app",
-    //   complete: false,
-    // },
-    // {
-    //   id: 2,
-    //   title: "Go through other videos",
-    //   complete: false,
-    // },
-    // {
-    //   id: 0,
-    //   title: "Buy milk",
-    //   complete: false,
-    // },
-    // {
-    //   id: 1,
-    //   title: "Complete todo app",
-    //   complete: false,
-    // },
-    // {
-    //   id: 2,
-    //   title: "Go through other videos",
-    //   complete: false,
-    // },
   ]);
 
+  // Handler for adding task
   const addTask = () => {
     // Adding tasks only if it's not a whitespace or it's not empty
     if (task.current.value.trim()) {
@@ -142,18 +38,24 @@ function Todo() {
     }
   };
 
+  // Handler for deleting task
   const deleteTask = (taskId) => {
     let localTasks = tasks.filter((t) => t.id != taskId);
     setTasks(localTasks);
   };
 
+  // Handler for toggling task as complete or incomplete
   const toggleTaskComplete = (taskId) => {
     let localTasks = [...tasks];
-    localTasks[taskId] = {
-      ...localTasks[taskId],
-      complete: !localTasks[taskId].complete,
-    };
-    setTasks(localTasks);
+    let toggledTaskIdx = localTasks.findIndex((t) => t.id == taskId);
+
+    if (toggledTaskIdx > -1) {
+      localTasks[toggledTaskIdx] = {
+        ...localTasks[toggledTaskIdx],
+        complete: !localTasks[toggledTaskIdx].complete,
+      };
+      setTasks(localTasks);
+    }
   };
 
   return (
