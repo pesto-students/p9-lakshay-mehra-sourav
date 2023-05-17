@@ -1,0 +1,81 @@
+-- Query for finding item with minimum weight
+SELECT *
+FROM ITEMS
+WHERE WEIGHT = (
+	SELECT MIN(WEIGHT)
+	FROM ITEMS
+)
+LIMIT 1;
+
+-- Query for finding the warehouses in Pune
+SELECT *
+FROM WAREHOUSES
+WHERE LOCATION = (
+	SELECT CITY_ID
+	FROM CITIES
+	WHERE CITY_NAME = "Pune"
+);
+
+-- Query for finding the details of all items 
+-- ordered by a particular customer
+SELECT
+	I.DESCTEXT AS ITEM,
+	I.WEIGHT,
+	I.COST,
+	O.ITEM_QUANTITY AS QUANTITY
+FROM
+	ORDER_DETAILS AS O
+	RIGHT JOIN
+	ITEMS AS I
+    ON O.ITEMID = I.ITEMID
+WHERE
+	O.CUSTOMER_ID = (
+	SELECT
+	  CUSTOMER_ID
+	FROM
+	  CUSTOMER
+	WHERE
+	  CNAME = "Amit Kumar"
+	);
+
+-- Query for finding the warehouse with maximum stores
+SELECT 
+	*, COUNT(*) AS STORE_COUNT
+FROM 
+	WAREHOUSES W INNER JOIN STORES S
+	ON W.WID = S.WID 
+GROUP BY 
+	W.WID 
+ORDER BY 
+	STORE_COUNT DESC 
+LIMIT 1
+;
+
+-- Query for finding least ordered item
+SELECT
+	I.ITEMID,
+	I.DESCTEXT,
+	I.WEIGHT,
+	I.COST,
+	COUNT(O.ITEMID) AS TOTAL_ORDERS
+FROM ORDER_DETAILS O
+RIGHT JOIN ITEMS I
+ON O.ITEMID = I.ITEMID
+GROUP BY I.ITEMID
+ORDER BY TOTAL_ORDERS
+LIMIT 1;
+
+-- Query for finding detailed orders given by each customer
+SELECT
+  C.CUSTOMER_ID,
+  C.CNAME,
+  C.ADDRESS,
+  C.CITY,
+  O.OID,
+  O.ODATE,
+  OD.ITEMID,
+  OD.ITEM_QUANTITY
+FROM CUSTOMER AS C
+INNER JOIN ORDER_DETAILS AS OD ON C.CUSTOMER_ID = OD.CUSTOMER_ID
+INNER JOIN ORDERS AS O ON O.OID = OD.OID
+ORDER BY C.CUSTOMER_ID;
