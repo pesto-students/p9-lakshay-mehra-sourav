@@ -1,8 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const forecastWeatherController = require("../controllers/forecastWeatherController");
 
-router.get("/", (req, res) => {
-  res.send("Hello from forecast weather");
-});
+router.get("/", forecastWeatherController);
 
 module.exports = router;
