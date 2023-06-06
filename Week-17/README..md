@@ -26,9 +26,9 @@ Access the API 👉 [here]
 
 This is a weather API based on Open Weather API. It provides 3 endpoints:
 
-- /weather: Retrieves weather data of multiple cities, supporting filtering by city name or city code, and pagination.
-- /forecast: Provides a detailed forecast for the next X days, allowing filtering by city, date, and moment.
-- /current: Retrieves the current weather conditions of a particular city.
+- **/api/weather**: Retrieves weather data of multiple cities, supporting filtering by city name or city code, and pagination.
+- **/api/forecast**: Provides a detailed forecast for the next X days, allowing filtering by city, date, and moment.
+- **/api/current**: Retrieves the current weather conditions of a particular city.
 
 ## [](#technologies)Technologies
 
